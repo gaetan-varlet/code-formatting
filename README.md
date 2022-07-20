@@ -101,15 +101,18 @@ Utilisation du formateur de code source d'Eclipse pour partager les règles de f
 #### Formatage du POM
 
 ```xml
-<pom>
-	<includes>
-		<include>pom.xml</include>
-	</includes>
-	<sortPom>
-		<expandEmptyElements>false</expandEmptyElements>
-		<nrOfIndentSpace>-1</nrOfIndentSpace>
-	</sortPom>
-</pom>
+<configuration>
+	<pom>
+		<includes>
+			<include>pom.xml</include>
+		</includes>
+		<sortPom>
+			<expandEmptyElements>false</expandEmptyElements>
+			<spaceBeforeCloseEmptyElement>true</spaceBeforeCloseEmptyElement>
+			<nrOfIndentSpace>-1</nrOfIndentSpace>
+		</sortPom>
+	</pom>
+</configuration>
 ```
 
 #### Possibilité de gérer le formatage des imports
