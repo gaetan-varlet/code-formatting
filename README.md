@@ -115,10 +115,21 @@ Utilisation du formateur de code source d'Eclipse pour partager les règles de f
 </configuration>
 ```
 
-#### Possibilité de gérer le formatage des imports
+#### Gérer le formatage des imports
 
 ```xml
 <importOrder /> <!-- standard import order -->
+```
+
+```xml
+<java>
+	<importOrder>
+		<wildcardsLast>false</wildcardsLast>
+		<order>\#fr.insee,\#,java,javax,org,com,fr,fr.insee,</order>
+		<!-- or use <file>${project.basedir}/eclipse.importorder</file> -->
+		<!-- you can use an empty string for all the imports you didn't specify explicitly, and '\\#` prefix for static imports. -->
+	</importOrder>
+</java>
 ```
 
 3. Lancement automatique du `check` dans le `mvn compile`
@@ -149,6 +160,3 @@ Générer le fichier de configuration dans Eclipse
 ## Javascript
 
 - Prettier
-
-
-

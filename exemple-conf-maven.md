@@ -28,6 +28,12 @@
 			<eclipse>
 				<file>${project.basedir}/.settings/org.eclipse.jdt.core.prefs</file>
 			</eclipse>
+			<importOrder>
+				<wildcardsLast>false</wildcardsLast>
+				<order>\#fr.insee,\#,java,javax,org,com,fr,fr.insee,</order>
+				<!-- or use <file>${project.basedir}/eclipse.importorder</file> -->
+				<!-- you can use an empty string for all the imports you didn't specify explicitly, and '\\#` prefix for static imports. -->
+			</importOrder>
 		</java>
 		<pom>
 			<includes>
