@@ -169,4 +169,32 @@ Générer le fichier de configuration dans Eclipse
 
 ## Javascript
 
-- Prettier
+- **Prettier** est un formateur de code, plutôt orienté *front*
+- s'occupe uniquement du formatage, pas de la qualité du code (utiliser ES Lint pour cela)
+- installation dans le projet : `https://prettier.io/docs/en/install.html`
+
+### Installation de Prettier
+
+- `npm install --save-dev --save-exact prettier`
+- création d'un fichier vide à la racine `.prettierrc.json`
+ 
+ ### Utilisation de Prettier
+
+- `npx prettier --check .` et `npx prettier --write .`
+- `npx prettier --check **/*.jsx` et `npx prettier --write **/*.jsx`
+
+### Utilisation dans l'IDE
+
+- formatage automatique à la sauvegarde. Dans VS Code :
+	- extension VS Code à installer
+	- configuration  pour que ça fonctionne :
+	```json
+	"[javascript]": {
+    	"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+  	}
+	```
+
+### Utilisation avec ESLint
+
+- ajout d'une dépendance pour que les 2 fonctionnes bien ensemble : `npm install --save-dev eslint-config-prettier`
