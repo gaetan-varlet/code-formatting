@@ -142,6 +142,9 @@ Cela permet de faire échouer la compilation et donc la construction du livrable
 
 ### Configurer son IDE pour avoir le même style en autosave
 
+Générer le fichier de configuration dans Eclipse
+- possibilité de l'utiliser dans **IntelliJ** via le plugin **Eclipse Code Formatter**
+- possibilité de l'utiliser dans **VS Code** en mettant le contenu du fichier dans le fichier `.settings/org.eclipse.jdt.core.prefs`
 
 ## Javascript
 
