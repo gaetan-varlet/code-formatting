@@ -13,14 +13,15 @@
 ## Java
 
 Utilisation du formateur de code source d'Eclipse pour partager les règles de formatage
-- possibilité d'importer et d'exporter les règles pour les partager : `eclipse-code-formatter.xml`
-- exemples :
-	- https://github.com/spring-projects/spring-amqp/blob/main/eclipse-code-formatter.xml
-	- https://gist.github.com/kaibeedevadmin/8c80f843fefc3dc3409210eb273a492e
-	- https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml
+- possibilité d'importer et d'exporter les règles pour les partager. Exemples :
+	- en XML : https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml
+	- en properties :
+	```properties
+	org.eclipse.jdt.core.formatter.tabulation.char=tab
+	org.eclipse.jdt.core.formatter.tabulation.size=4
+	```
 	- exemple pour la gestion des lignes d'imports : https://gist.github.com/kaibeedevadmin/4da9d01e4ad9e71a441d47c25d416157
 - possibilité d'importer cette configuration dans IntelliJ via le plugin **Eclipse Code Formatter**
-
 
 ### Utilisation de Spotless
 
