@@ -52,12 +52,12 @@ Cela permet de faire échouer la compilation et donc la construction du livrable
 
 ```xml
 <executions>
-   <execution>
+	<execution>
 		<phase>compile</phase>
 		<goals>
 			<goal>check</goal>
 		</goals>
-    </execution>
+	</execution>
 </executions>
 ```
 
