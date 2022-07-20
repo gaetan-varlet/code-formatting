@@ -25,6 +25,10 @@ Utilisation du formateur de code source d'Eclipse pour partager les règles de f
 
 ### Utilisation de Spotless
 
+- plugin de formatage de code
+	- permet de vérifier que notre code respecte le formatage du projet
+	- permet d'appliquer le formatage du projet
+	- permet de faire échouer la compilation du code source si le formatage n'est pas respecté
 - documentation : https://github.com/diffplug/spotless/tree/main/plugin-maven
 - 2 commandes à connaître :
 	- `mvn spotless:check` : vérifie si le style est bien appliqué
