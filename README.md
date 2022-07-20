@@ -43,7 +43,31 @@ Utilisation du formateur de code source d'Eclipse pour partager les règles de f
 
 2. Ajout d'une balise `configuration`
 
-Possibilité d'utiliser un style existant, comme **Google Java Format**
+#### Définition de formats pour différents types de fichiers
+
+```xml
+<configuration>
+	<formats>
+		<!-- you can define as many formats as you want, each is independent -->
+		<format>
+			<!-- define the files to apply to -->
+			<includes>
+				<include>*.md</include>
+				<include>.gitignore</include>
+			</includes>
+			<!-- define the steps to apply to those files -->
+			<trimTrailingWhitespace />
+			<endWithNewline />
+			<indent>
+				<tabs>true</tabs>
+				<spacesPerTab>4</spacesPerTab>
+			</indent>
+		</format>
+	</formats>
+</configuration>
+```
+
+#### Utiliser un style existant, comme **Google Java Format**
 
 ```xml
 <configuration>
@@ -60,7 +84,9 @@ Possibilité d'utiliser un style existant, comme **Google Java Format**
 </configuration>
 ```
 
-Possibilité d'utiliser ses propres règles de formattage définies dans un fichier de configuration, par exemple `https://gist.github.com/fbricon/30c5971f7e492c8a74ca2b2d7a7bb966`
+#### Utiliser ses propres règles de formattage définies dans un fichier de configuration
+
+- par exemple `https://gist.github.com/fbricon/30c5971f7e492c8a74ca2b2d7a7bb966`
 
 ```xml
 <configuration>
@@ -70,6 +96,26 @@ Possibilité d'utiliser ses propres règles de formattage définies dans un fich
 		</eclipse>
 	</java>
 </configuration>
+```
+
+#### Formatage du POM
+
+```xml
+<pom>
+	<includes>
+		<include>pom.xml</include>
+	</includes>
+	<sortPom>
+		<expandEmptyElements>false</expandEmptyElements>
+		<nrOfIndentSpace>-1</nrOfIndentSpace>
+	</sortPom>
+</pom>
+```
+
+#### Possibilité de gérer le formatage des imports
+
+```xml
+<importOrder /> <!-- standard import order -->
 ```
 
 3. Lancement automatique du `check` dans le `mvn compile`
