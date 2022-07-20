@@ -43,8 +43,34 @@ Utilisation du formateur de code source d'Eclipse pour partager les règles de f
 
 2. Ajout d'une balise `configuration`
 
-- possibilité d'utiliser un style existant, comme **Google Java Format**
-- possibilité d'utiliser ses propres règles de formattage définies dans un fichier de configuration
+Possibilité d'utiliser un style existant, comme **Google Java Format**
+
+```xml
+<configuration>
+	<!-- define a language-specific format -->
+	<java>
+		<!-- no need to specify files, inferred automatically, but you can if you want -->
+		<!-- apply a specific flavor of google-java-format and reflow long strings -->
+		<googleJavaFormat>
+			<version>1.15.0</version>
+			<style>AOSP</style>
+			<reflowLongStrings>true</reflowLongStrings>
+		</googleJavaFormat>
+	</java>
+</configuration>
+```
+
+Possibilité d'utiliser ses propres règles de formattage définies dans un fichier de configuration, par exemple `https://gist.github.com/fbricon/30c5971f7e492c8a74ca2b2d7a7bb966`
+
+```xml
+<configuration>
+	<java>
+		<eclipse>
+			<file>${project.basedir}/.settings/org.eclipse.jdt.core.prefs</file>
+		</eclipse>
+	</java>
+</configuration>
+```
 
 3. Lancement automatique du `check` dans le `mvn compile`
 
