@@ -132,6 +132,11 @@ Utilisation du formateur de code source d'Eclipse pour partager les règles de f
 </java>
 ```
 
+#### Autres
+
+Plein d'autres possibilités, voir la doc : Markdown, SQL, ...
+
+
 3. Lancement automatique du `check` dans le `mvn compile`
 
 Cela permet de faire échouer la compilation et donc la construction du livrable si on a oublié d'appliquer le formattage
