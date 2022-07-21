@@ -141,7 +141,6 @@ Utilisation du formateur de code source d'Eclipse pour partager les règles de f
 
 Plein d'autres possibilités, voir la doc : Markdown, SQL, ...
 
-
 3. Lancement automatique du `check` dans le `mvn compile`
 
 Cela permet de faire échouer la compilation et donc la construction du livrable si on a oublié d'appliquer le formattage
@@ -178,22 +177,22 @@ Générer le fichier de configuration dans Eclipse
 - `npm install --save-dev --save-exact prettier`
 - création d'un fichier vide à la racine `.prettierrc.json`
  
- ### Utilisation de Prettier
+### Utilisation de Prettier
 
 - `npx prettier --check .` et `npx prettier --write .`
 - `npx prettier --check **/*.jsx` et `npx prettier --write **/*.jsx`
 
 ### Utilisation dans l'IDE
 
-- formatage automatique à la sauvegarde. Dans VS Code :
-	- extension VS Code à installer
-	- configuration  pour que ça fonctionne :
-	```json
-	"[javascript]": {
-    	"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.formatOnSave": true
-  	}
-	```
+Formatage automatique à la sauvegarde. Dans VS Code :
+- extension VS Code à installer
+- configuration  pour que ça fonctionne :
+```json
+"[javascript]": {
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true
+}
+```
 
 ### Utilisation avec ESLint
 
