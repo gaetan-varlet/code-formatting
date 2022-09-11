@@ -42,7 +42,7 @@ Utilisation du formateur de code source d'Eclipse pour partager les règles de f
 <plugin>
 	<groupId>com.diffplug.spotless</groupId>
 	<artifactId>spotless-maven-plugin</artifactId>
-	<version>2.22.8</version>
+	<version>2.25.0</version>
 </plugin>
 ```
 
