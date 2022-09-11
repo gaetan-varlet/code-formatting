@@ -4,7 +4,7 @@
 <plugin>
 	<groupId>com.diffplug.spotless</groupId>
 	<artifactId>spotless-maven-plugin</artifactId>
-	<version>2.22.8</version>
+	<version>2.25.0</version>
 	<configuration>
 		<formats>
 			<!-- you can define as many formats as you want, each is independent -->
