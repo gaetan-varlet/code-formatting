@@ -166,6 +166,34 @@ Générer le fichier de configuration dans Eclipse
 - possibilité de l'utiliser dans **IntelliJ** via le plugin **Eclipse Code Formatter**
 - possibilité de l'utiliser dans **VS Code** en mettant le contenu du fichier dans le fichier `.settings/org.eclipse.jdt.core.prefs`
 
+### Automatier le lancement de `spotless:apply` lors des commits
+
+L'execution de la commande `mvn spotless:apply` peut être automatisée à chaque commit en local, en utilisant les hooks de git :
+
+Dans le répertoire du projet, **en local**, aller dans `.git/hooks`
+Créer un fichier nommmé "pre-commit" (⚠ sans extension) avec le contenu suivant :
+
+```bash
+#!/bin/sh
+
+# Part 1
+stagedFiles=$(git diff --staged --name-only)
+
+# Part 2
+echo "Running spotlessApply. Formatting code..."
+mvn spotless:apply
+
+# Part 3
+for file in $stagedFiles; do
+if test -f "$file"; then
+git add $file
+fi
+done
+```
+
+- A chaque commit ce script sera executé automatiquement, en listant les fichiers ajouté dans l'index (`staged`) et prêt à être commités
+- Le formattage est appliqué sur les fichiers (`staged` et `unstaged`) mais seul les fichiers `staged` sont commités
+
 ## Javascript
 
 - **Prettier** est un formateur de code, plutôt orienté *front*
