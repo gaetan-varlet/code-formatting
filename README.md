@@ -192,7 +192,7 @@ done
 ```
 
 - A chaque commit ce script sera executé automatiquement, en listant les fichiers ajouté dans l'index (`staged`) et prêt à être commités
-- Le formattage est appliqué sur les fichiers (`staged` et `unstaged`) mais seul les fichiers `staged` sont commités
+- Le formatage est appliqué sur tous les fichiers (`staged` et `unstaged`) mais seul les fichiers `staged` sont commités
 
 ## Javascript
 
