@@ -33,6 +33,7 @@ Utilisation du formateur de code source d'Eclipse pour partager les règles de f
 - 2 commandes à connaître :
 	- `mvn spotless:check` : vérifie si le style est bien appliqué
 	- `mvn spotless:apply` : applique le style défini par le plugin
+- ⚠️ Si vous utilisez un ficher avec vos propres règles de formatage, Il faut utiliser la version `2.34.0`, les versions supérieures (jusqu'à la `2.37.0` existante au moment de l'écriture de ce warning) génère une erreur. En revanche, aucun soucis avec les dernières versions si vous utilisez un style défini comme *Google Java Format*
 
 ### Mise en place
 
